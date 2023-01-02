@@ -165,6 +165,41 @@ function testgreater(val){
         return "in between 5 and 10";
         }
     console.log(elseif(8)) 
+    //golf code
+    /*In the game of golf each hole has a par meaning the average number of strokes a golfer is expected to make in order to put the ball in a hole to complete the play. Depending on how far above or below par your strokes are, there is a different sportsterms.
+
+Your function will be passed par and strokes arguments. Return the correct string according to this table which lists the strokes in order of priority; top (highest) to bottom (lowest):
+
+Strokes	                 Return
+   1	             "Hole-in-one!"
+<= par - 2	            "Eagle"
+par - 1	                "Birdie"
+par	                     "Par"
+par + 1	                "Bogey"
+par + 2	             "Double Bogey"
+= par + 3              "Go Home!"
+
+par and strokes will always be numeric and positive.*/
+
+var playing=["Hole-in-one!","Eagle","Birdie","Par","Bogey","Double Bogey","Go Home"];
+function golfscore(par,Strokes){
+    if (Strokes == 1){
+        return playing[0];
+    }else if(Strokes<= par - 2){
+        return playing[1];
+    }else if (Strokes== par-1) {
+        return playing[2];
+    }else if (Strokes== par) {
+        return playing[3];
+    }else if (Strokes== par +1) {
+        return playing[4];
+    }else if (Strokes== par+2) {
+        return playing[5];
+    }else if(Strokes==par +3){
+        return playing[6];
+    }
+}
+console.log(golfscore(0,1))
 
 
 
